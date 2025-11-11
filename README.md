@@ -1,9 +1,9 @@
-# Django Trunc(kind) and Extract(lookup_name) SQL Injection (CVE-2022-34265)
+# Django Trunc(kind) SQL Injection (CVE-2022-34265)
 
 
 Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
 
-Django released a security update on July 4, 2022, which fixes a SQL injection vulnerability in the Trunc() and Extract() database functions. This vulnerability affects Django versions before 4.0.6, 3.2.14.
+Django released a security update on July 4, 2022, which fixes a SQL injection vulnerability in the Trunc() database functions. This vulnerability affects Django versions before 4.0.6, 3.2.14.
 
 References:
 
@@ -18,7 +18,7 @@ Execute the following command to start a vulnerable Django 4.0.5 server:
 docker compose up
 ```
 
-After the server is started, you can access the web page at `http://your-ip:8000`.
+After the server is started, you can access the web page at `http://localhost:8000`.
 
 ## Vulnerability Reproduction
 
