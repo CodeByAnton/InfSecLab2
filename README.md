@@ -22,7 +22,7 @@ After the server is started, you can access the web page at `http://localhost:80
 
 ## Vulnerability Reproduction
 
-The web application uses the `Trunc` function to aggregate page click counts by datetime. Visit `http://your-ip:8000/?date=minute` to see the number of clicks per minute:
+The web application uses the `Trunc` function to aggregate page click counts by datetime. Visit `http://localhost:8000/?date=minute` to see the number of clicks per minute:
 
 ![](1.png)
 
